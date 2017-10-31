@@ -1,0 +1,13 @@
+version: '3'
+services:
+    cli:
+        image: silintl/php7:latest
+        volumes:
+            - ./:/data
+        env_file:
+            - ./local.env
+        environment:
+            COMPOSER_CACHE_DIR: /tmp
+        working_dir: /data
+        command: ["true"]
+

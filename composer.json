@@ -1,0 +1,34 @@
+{
+  "name": "silinternational/idp-pw-api-personnel-multiple",
+  "description": "Personnel component for IdP PW API for using multiple backends.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matt Henderson",
+      "email": "matt_henderson@sil.org"
+    },
+    {
+      "name": "Phillip Shipley",
+      "email": "phillip_shipley@sil.org"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0.0",
+    "fillup/fake-bower-assets": "^2.0.9",
+    "roave/security-advisories": "dev-master",
+    "silinternational/idp-pw-api-common": "^1.0",
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0",
+    "silinternational/php-env": "^2.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sil\\IdpPw\\Common\\Personnel\\Multiple\\": "src/",
+      "tests\\mock\\": "tests/mock/"
+    }
+  }
+}
+
