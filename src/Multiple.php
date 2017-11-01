@@ -106,7 +106,7 @@ class Multiple extends Component implements PersonnelInterface
         foreach ($personnelUsers as $user) {
             /** @var PersonnelUser $user */
             // Make sure employee_id matches
-            if ($personnelUser->employeeId !== null && $personnelUser->employeeId !== $user->employeeId) {
+            if ($personnelUser->employeeId !== null && $personnelUser->employeeId != $user->employeeId) {
                 throw new \Exception(
                     sprintf(
                         'Employee IDs don\'t match when trying to merge personnel user records. %s != %s',
