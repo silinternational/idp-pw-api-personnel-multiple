@@ -120,6 +120,7 @@ class Multiple extends Component implements PersonnelInterface
             $personnelUser->firstName       = $user->firstName          ?? $personnelUser->firstName;
             $personnelUser->lastName        = $user->lastName           ?? $personnelUser->lastName;
             $personnelUser->email           = $user->email              ?? $personnelUser->email;
+            $personnelUser->employeeId      = $user->employeeId         ?? $personnelUser->employeeId;
             $personnelUser->username        = $user->username           ?? $personnelUser->username;
             $personnelUser->supervisorEmail = $user->supervisorEmail    ?? $personnelUser->supervisorEmail;
             $personnelUser->spouseEmail     = $user->spouseEmail        ?? $personnelUser->spouseEmail;
