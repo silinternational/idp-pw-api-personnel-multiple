@@ -18,7 +18,7 @@ class Multiple extends Component implements PersonnelInterface
     /** @var  array */
     public $personnelBackendConfig;
 
-    /** @var array */
+    /** @var PersonnelInterface[] */
     public $personnelBackends = [];
 
     /**
@@ -55,7 +55,6 @@ class Multiple extends Component implements PersonnelInterface
     {
         $foundUsers = [];
         foreach ($this->personnelBackends as $personnelBackend) {
-            /** @var PersonnelInterface $personnelBackend */
             $foundUsers[] = $personnelBackend->findByEmployeeId($employeeId);
         }
 
@@ -72,7 +71,6 @@ class Multiple extends Component implements PersonnelInterface
     {
         $foundUsers = [];
         foreach ($this->personnelBackends as $personnelBackend) {
-            /** @var PersonnelInterface $personnelBackend */
             $foundUsers[] = $personnelBackend->findByUsername($username);
         }
 
@@ -89,7 +87,6 @@ class Multiple extends Component implements PersonnelInterface
     {
         $foundUsers = [];
         foreach ($this->personnelBackends as $personnelBackend) {
-            /** @var PersonnelInterface $personnelBackend */
             $foundUsers[] = $personnelBackend->findByEmail($email);
         }
 
@@ -123,7 +120,6 @@ class Multiple extends Component implements PersonnelInterface
             $personnelUser->firstName       = $user->firstName          ?? $personnelUser->firstName;
             $personnelUser->lastName        = $user->lastName           ?? $personnelUser->lastName;
             $personnelUser->email           = $user->email              ?? $personnelUser->email;
-            $personnelUser->employeeId      = $user->employeeId         ?? $personnelUser->employeeId;
             $personnelUser->username        = $user->username           ?? $personnelUser->username;
             $personnelUser->supervisorEmail = $user->supervisorEmail    ?? $personnelUser->supervisorEmail;
             $personnelUser->spouseEmail     = $user->spouseEmail        ?? $personnelUser->spouseEmail;
