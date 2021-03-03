@@ -10,12 +10,8 @@ clean:
 deps:
 	docker-compose run --rm cli composer install --no-scripts
 
-depsshow:
-	docker-compose run --rm cli bash -c "composer show -Df json > versions.json"
-
 depsupdate:
 	docker-compose run --rm cli composer update --no-scripts
-	make depsshow
 
 test:
 	docker-compose run --rm cli /data/vendor/bin/phpunit -c /data/tests/phpunit.xml
