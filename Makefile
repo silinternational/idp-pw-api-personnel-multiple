@@ -15,7 +15,3 @@ depsupdate:
 
 test:
 	docker-compose run --rm cli /data/vendor/bin/phpunit -c /data/tests/phpunit.xml
-
-testci:
-	docker-compose run --rm cli bash -c "/data/run-tests.sh"
-
