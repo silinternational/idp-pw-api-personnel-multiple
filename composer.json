@@ -21,7 +21,7 @@
     "yiisoft/yii2": "~2.0.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.0",
+    "phpunit/phpunit": "^6.0 || ^7.0 || ^8.0",
     "silinternational/php-env": "^2.1.1"
   },
   "autoload": {
@@ -29,6 +29,10 @@
       "Sil\\IdpPw\\Common\\Personnel\\Multiple\\": "src/",
       "tests\\mock\\": "tests/mock/"
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
   }
 }
-
